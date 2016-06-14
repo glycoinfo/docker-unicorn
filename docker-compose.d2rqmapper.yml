@@ -1,6 +1,6 @@
 version: '2'
 services:
-  d3rq:
+  d2rq:
     build: .
     # ports:
     #  - "80:80"
