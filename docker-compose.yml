@@ -7,10 +7,17 @@ services:
       file: docker-compose.d2rqmapper.yml
       service: d2rq
     restart: never
+    links:
+      - virtuoso:virtuoso
   web:
     extends:
       file: docker-apache/docker-compose.yml
       service: web
     links:
       - d2rq:d2rq.unicorn
+    restart: never
+  virtuoso:
+    extends:
+      file: docker-virtuoso/docker-compose.yml
+      service: virtuoso
     restart: never
