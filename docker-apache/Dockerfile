@@ -7,5 +7,6 @@ RUN a2enmod proxy_http
 ADD sites-available /etc/apache2/sites-available
  
 RUN a2ensite 000-default.conf
+RUN a2ensite 010-d2rq.conf
  
 CMD ["/run.sh"]
