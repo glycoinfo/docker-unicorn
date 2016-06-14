@@ -1,0 +1,9 @@
+version: '2'
+services:
+  web:
+    build: .
+    # ports:
+    #  - "80:80"
+    volumes:
+     - ${HOME}/d2rqmapper/apache/logs:/var/log/apache2
+    restart: always
