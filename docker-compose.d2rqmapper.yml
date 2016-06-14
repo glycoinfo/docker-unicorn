@@ -1,7 +1,7 @@
 version: '2'
 services:
   d2rq:
-    build: .
+    image: d2rqmapper/d2rq-mapper
     # ports:
     #  - "80:80"
     volumes:
