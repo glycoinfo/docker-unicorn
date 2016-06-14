@@ -9,7 +9,7 @@ services:
     restart: never
   web:
     extends:
-      file: docker-apache/docker-compose..yml
+      file: docker-apache/docker-compose.yml
       service: web
     links:
       - d2rq:d2rq.unicorn.glycoinfo.org
