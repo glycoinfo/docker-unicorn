@@ -12,5 +12,5 @@ services:
       file: docker-apache/docker-compose.yml
       service: web
     links:
-      - d2rq:d2rq.unicorn.glycoinfo.org
+      - d2rq:d2rq.unicorn
     restart: never
