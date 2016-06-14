@@ -1,0 +1,16 @@
+# This is a simple setup for apache, java, and stanza.  Substructure search should be possible, however GlycanBuilder (graphics search) will not.
+# For graphics search, please use the default docker-compose.yml ()
+version: '2'
+services:
+  d2rq:
+    extends:
+      file: docker-compose.d2rqmapper.yml
+      service: d2rq
+    restart: never
+  web:
+    extends:
+      file: docker-apache/docker-compose..yml
+      service: web
+    links:
+      - d2rq:d2rq.unicorn.glycoinfo.org
+    restart: never
