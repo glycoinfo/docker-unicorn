@@ -3,7 +3,7 @@ services:
   postgres:
     build: .
     ports:
-     - "5432:5432"
+     - "5433:5432"
     # volumes:
      # - ${HOME}/postgres/apache/logs:/var/log/apache2
     restart: always
