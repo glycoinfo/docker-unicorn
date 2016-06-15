@@ -9,6 +9,7 @@ services:
     restart: never
     links:
       - virtuoso:virtuoso
+      - postgres:postgres
   web:
     extends:
       file: docker-apache/docker-compose.yml
@@ -21,3 +22,7 @@ services:
       file: docker-virtuoso/docker-compose.yml
       service: virtuoso
     restart: never
+  postgres:
+    extends:
+      file: docker-postgres/docker-compose.yml
+      service: postgres
