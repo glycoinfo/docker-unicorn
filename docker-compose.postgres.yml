@@ -1,0 +1,9 @@
+version: '2'
+services:
+  postgres:
+    image: postgres
+    # ports:
+    #  - "80:80"
+    # volumes:
+     # - ${HOME}/postgres/apache/logs:/var/log/apache2
+    restart: always
