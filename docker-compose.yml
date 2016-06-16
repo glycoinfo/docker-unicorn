@@ -8,13 +8,13 @@ services:
       service: d2rq
     restart: never
     links:
-      - virtuoso:virtuoso
       - postgres:postgres
   web:
     extends:
       file: docker-apache/docker-compose.yml
       service: web
     links:
+      - virtuoso:virtuoso
       - d2rq:d2rq.unicorn
     restart: never
   virtuoso:
