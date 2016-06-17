@@ -16,6 +16,7 @@ services:
     links:
       - virtuoso:virtuoso
       - d2rq:d2rq.unicorn
+      - play:play.unicorn
     restart: never
   virtuoso:
     extends:
@@ -26,3 +27,7 @@ services:
     extends:
       file: docker-postgres/docker-compose.yml
       service: postgres
+  play:
+    extends:
+      file: docker-play/docker-compose.yml
+      service: play
