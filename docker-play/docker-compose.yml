@@ -1,0 +1,11 @@
+version: '2'
+services:
+  play:
+    image: unicorn_standalone:1.0-SNAPSHOT
+    ports:
+      - "9000:9000"
+      - "9999:9999"
+      - "8888:8888"
+    volumes:
+      - ${HOME}/playframework/unicorn_standalone_app/:/play/
+    restart: always

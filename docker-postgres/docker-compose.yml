@@ -1,9 +1,9 @@
 version: '2'
 services:
   postgres:
-    build: .
+    image: postgres_unicorn 
     ports:
      - "5433:5432"
-    # volumes:
-     # - ${HOME}/postgres/apache/logs:/var/log/apache2
+    volumes:
+     - ${HOME}/postgres/tmp/:/tmp/postgres
     restart: always
