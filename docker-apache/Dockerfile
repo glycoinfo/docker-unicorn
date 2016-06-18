@@ -8,5 +8,6 @@ ADD sites-available /etc/apache2/sites-available
  
 RUN a2ensite 000-default.conf
 RUN a2ensite 010-d2rq.conf
+RUN a2ensite 020-ts.conf
  
 CMD ["/run.sh"]
